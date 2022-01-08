@@ -1,0 +1,288 @@
+@use "global" as *;
+
+.contact{
+  width: 100%;
+  margin: 0 auto;
+	padding: 0 1rem;
+
+	@include mq(md){
+		padding: 6rem 2rem;
+		width: 96rem;
+	}
+}
+
+
+// -----タイトル-----
+.contact__ttl{
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  text-align: center;
+
+	@include mq(md){
+		font-size: 4rem;
+		margin-bottom: 4rem;
+	}
+}
+
+
+// -----テーブル-----
+.contact__table{
+  width: 100%;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+
+	@include mq(md){
+  	font-size: 1.6rem;
+	}
+}
+
+.contact__header,
+.contact__body {
+  padding: 1rem;
+  border: 1px solid #ccc;
+
+	@include mq(md){
+		padding: 2rem;
+	}
+}
+
+.contact__header {
+  text-align: left;
+  width: 37%;
+  background-color: #eee;
+
+	@include mq(md){
+		width: 33%;
+	}
+}
+
+.contact__body {
+  width: 63%;
+
+	@include mq(md){
+		width: 70%;
+	}
+}
+
+
+// -----input-----
+.contact__text {
+  width: 100%;
+  padding: .5rem;
+  border-radius: .3rem;
+  border: 1px solid #ccc;
+  max-width: 40rem;
+
+	@include mq(md){
+		padding: 1rem;
+	}
+}
+
+
+// -----radio-----
+.contact__radio {
+	display: none;
+}
+
+.contact__radio + span {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0.2rem 0;
+	padding: 0 0 0 1.8rem;
+	position: relative;
+}
+
+.contact__radio + span::before {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	border-radius: 50%;
+	content: "";
+	display: block;
+	height: 16px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 16px;
+}
+
+.contact__radio + span::after {
+	background: rgba(0, 0, 0, 0.32);
+	border: 1px solid transparent;
+	border-radius: 50%;
+	content: "";
+	height: 8px;
+	left: 4px;
+	opacity: 0;
+	padding: 2px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease 0s;
+	width: 8px;
+}
+
+.contact__radio:checked + span::after {
+	opacity: 1;
+}
+
+
+// -----Select-----
+.contact__select {
+	background: transparent url(../images/common/arrow.png) no-repeat center right 8px/16px 16px;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	border-radius: .5rem;
+	color: inherit;
+	font-size: 1.2rem;
+	padding: 0.8rem;
+	width: 100%;
+  border: 1px solid #ccc;
+
+	@include mq(md){
+		font-size: 1.6rem;
+	}
+}
+
+.contact__select::-ms-expand {
+	display: none;
+}
+
+.contact__select:focus {
+	border: 1px solid rgba(0, 0, 0, 0.32);
+	box-shadow: none;
+}
+
+
+// -----Checkbox-----
+.contact__checkbox {
+  display: block;
+}
+
+.contact__checkbox + .contact__checkbox {
+  margin-top: 1rem;
+}
+
+.contact__checkbox--input + span {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0.2rem 0;
+	padding: 0 0 0 1.7rem;
+	position: relative;
+	margin-left: .5rem;
+
+	@include mq(md){
+		padding: 0 0 0 2.2rem;
+	}
+}
+
+.contact__checkbox--input + span::before {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	border-radius: 2px;
+	content: "";
+	display: block;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 1.3rem;
+	width: 1.3rem;
+
+	@include mq(md){
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+}
+
+.contact__checkbox--input + span::after {
+	border-bottom: 3px solid rgba(0, 0, 0, 0.32);
+	border-left: 3px solid rgba(0, 0, 0, 0.32);
+	content: "";
+	display: block;
+	height: 0.7rem;
+	left: 0;
+	margin-top: -0.2rem;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(-45deg);
+	transition: all 0.3s ease 0s;
+	width: 1.2rem;
+
+	@include mq(md){
+		width: 1.4rem;
+	}
+}
+
+.contact__checkbox--input:checked + span::after {
+	opacity: 1;
+}
+
+
+// -----textarea-----
+.contact__textarea {
+  width: 100%;
+  padding: .5rem;
+  height: 20rem;
+  border-radius: .5rem;
+  border: 1px solid #ccc;
+
+	@include mq(md){
+		padding: 1rem;
+	}
+}
+
+
+// -----button-----
+.contact__submit {
+	background-color: rgba(0, 0, 0, 0.32);
+	background-image: none;
+	border-radius: 0;
+	color: #fff;
+	display: block;
+	font-size: 1rem;
+	margin: 0 0 1rem;
+	padding: 0.6rem 2rem;
+	text-decoration: none;
+  margin: 0 auto;
+}
+
+
+// -----file-----
+.contact__file {
+	display: none;
+}
+
+.contact__file--label {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	cursor: pointer;
+	padding: 0.4em 0.8em;
+}
+
+.contact__file--input {
+	background-color: transparent;
+	background-image: none;
+	border: none;
+	border-radius: 0;
+	color: inherit;
+	display: none;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.4rem 0;
+	width: 100%;
+}
+
+.contact__file--name{
+	font-size: 1rem;
+	margin: 1rem 0 0 0;
+	display: block;
+
+	@include mq(md){
+		display: inline-block;
+		margin: 0 0 0 1rem;
+		font-size: 1.2rem;
+	}
+}

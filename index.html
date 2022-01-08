@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>Contact Form</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="”icon”" href="" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+
+  <div class="contact">
+    <h1 class="contact__ttl">Contact</h1>
+
+    <form action="">
+      <table class="contact__table">
+
+        <!-- name -->
+        <tr>
+          <th class="contact__header">名前</th>
+          <td class="contact__body">
+            <input type="text" name="name" class="contact__text">
+          </td>
+        </tr>
+
+        <!-- radio -->
+        <tr>
+          <th class="contact__header">ラジオボタン</th>
+          <td class="contact__body">
+            <label>
+              <input class="contact__radio" type="radio" name="radio">
+              <span>ラジオボタン1</span>
+            </label>
+            <label>
+              <input class="contact__radio" type="radio" name="radio">
+              <span>ラジオボタン2</span>
+            </label>
+          </td>
+        </tr>
+
+        <!-- email -->
+        <tr>
+          <th class="contact__header">メール</th>
+          <td class="contact__body">
+            <input type="email" name="email" class="contact__text">
+          </td>
+        </tr>
+
+        <!-- phone -->
+        <tr>
+          <th class="contact__header">電話</th>
+          <td class="contact__body">
+            <input type="tel" name="電話" class="contact__text">
+          </td>
+        </tr>
+
+        <!-- select -->
+        <tr>
+          <th class="contact__header">セレクトボックス</th>
+          <td class="contact__body">
+            <select name="職業" id="" class="contact__select">
+              <option>セレクトボックス1</option>
+              <option>セレクトボックス2</option>
+              <option>セレクトボックス3</option>
+              <option>セレクトボックス4</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- checkbox -->
+        <tr>
+          <th class="contact__header">チェックボックス</th>
+          <td class="contact__body">
+            <label class="contact__checkbox">
+              <input class="contact__checkbox--input" type="checkbox" name="スキル">
+              <span class="contact__checkbox--text">チェックボックス1</span>
+            </label>
+            <label class="contact__checkbox">
+              <input class="contact__checkbox--input" type="checkbox" name="スキル">
+              <span class="contact__checkbox--text">チェックボックス2</span>
+            </label>
+            <label class="contact__checkbox">
+              <input class="contact__checkbox--input" type="checkbox" name="スキル">
+              <span class="contact__checkbox--text">チェックボックス3</span>
+            </label>
+            <label class="contact__checkbox">
+              <input class="contact__checkbox--input" type="checkbox" name="スキル">
+              <span class="contact__checkbox--text">チェックボックス4</span>
+            </label>
+          </td>
+        </tr>
+
+        <!-- textarea -->
+        <tr>
+          <th class="contact__header">お問い合わせ内容</th>
+          <td class="contact__body">
+            <textarea name="問い合わせ" class="contact__textarea" cols="30" rows="10"></textarea>
+          </td>
+        </tr>
+
+        <!-- file -->
+        <tr>
+          <th class="contact__header">添付</th>
+          <td class="contact__body">
+            <label class="contact__file--label" for="contactFile">
+              ファイルを選択<input type="file" class="contact__file" id="contactFile">
+            </label>
+            <span class="contact__file--name">選択されていません</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- button -->
+      <input class="contact__submit" type="submit" value="送信" />
+    </form>
+  </div>
+</body>
+</html>
